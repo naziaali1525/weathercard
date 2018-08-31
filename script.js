@@ -31,6 +31,8 @@ function initialize(){
 }
 function getWeather() {
     document.querySelector(".weather-info").style.display = "block";
+    document.querySelector(".greet").style.display = "none";
+
     const cityName = document.querySelector("input").value;
     $.ajax({
        url:`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=47d6d6650842650300bf818abb27ce56&units=metric`,
@@ -60,19 +62,10 @@ function getWeather() {
             }
            
           
-           //THis returns size of direct divs inside weeks div
-           console.log(document.getElementById("weeks").childElementCount)
-           let elemnt = document.getElementById("weeks")
-           let daysDivs = elemnt.getElementsByClassName("days")
-           
-         
-           
            document.querySelector(".city-name").innerHTML = data.name;
            document.querySelector(".current-weather > span").innerHTML = Math.round(data.main.temp) + " C";
-        //    document.querySelector("#img").innerHTML = data.weather[i].images;
            document.querySelector(".description").innerHTML = data.weather[0].main;
-        //    document.querySelector(".min > span").innerHTML = Math.round(data.main.temp_min);
-        //    document.querySelector(".max > span").innerHTML = Math.round(data.main.temp_max);
+      
 
        },
     
@@ -107,14 +100,14 @@ function getWeather() {
 
 
         //  temperature
-        document.querySelector(".temp1").innerHTML = Math.round(data.list[0].main.temp) + " C°";        
-        document.querySelector(".temp2").innerHTML = Math.round(data.list[5].main.temp) + " C°";          
-        document.querySelector(".temp3").innerHTML = Math.round(data.list[13].main.temp) + " C°";         
-        document.querySelector(".temp4").innerHTML = Math.round(data.list[21].main.temp) + " C°";         
-        document.querySelector(".temp5").innerHTML = Math.round(data.list[29].main.temp) + " C°";  
+        document.querySelector(".temp1").innerHTML = Math.round(data.list[0].main.temp) + " c°";        
+        document.querySelector(".temp2").innerHTML = Math.round(data.list[5].main.temp) + " c°";          
+        document.querySelector(".temp3").innerHTML = Math.round(data.list[13].main.temp) + " c°";         
+        document.querySelector(".temp4").innerHTML = Math.round(data.list[21].main.temp) + " c°";         
+        document.querySelector(".temp5").innerHTML = Math.round(data.list[29].main.temp) + " c°";  
 
 
-       let forcastIcons =  data.list[0].weather[0].main;
+    let forcastIcons =  data.list[0].weather[0].main;
 
         if(forcastIcons  == "Smoke") {
             document.querySelector(".days-icons").innerHTML = `<i class="wi wi-smoke"></i>`
@@ -223,6 +216,13 @@ function getWeather() {
         else {
         document.querySelector(".days-icons4").innerHTML = `<i class="wi wi-night-clear"></i>`
         }
+
+        // document.querySelector("body").style.background-image = "block"
+        // let backgrouindImage = "";
+         
+        //     if(backgrouindImage == "Sun") {
+        //         document.querySelector("body").style.background-image = `url('images/giphy.gif')`
+        //     }
     },
         error: function(error){
          console.log(error)

@@ -20,8 +20,10 @@
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
         crossorigin="anonymous">
-        <link href="https://fonts.googleapis.com/css?family=News+Cycle" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=News+Cycle/family=Courgette" rel="stylesheet">
+        
     <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="script.js"></script>
 </head>
@@ -34,15 +36,20 @@
                 <span class="input-group-text my-btn" id="basic-addon2"><i class="fas fa-search"></i></span>
             </div>
         </div>
+
+        <div class="greet">
+            <div class="welcome-note animated bounceInUp delay-2s"><em>Welcome to Weather app</em></div>
+        </div>
+
         <div class="weather-info">
 
             <div class="temp-card">
            
-            <h6 class="city-name">Karachi</h6>
-                <div id="img"></div>
-                <p class="current-weather">
+                <h6 class="city-name"></h6>
+                    <div id="img"></div>
+                    <p class="current-weather">
                     <span></span>°</p>
-                <p class="description"></p>
+                    <p class="description"></p>
                
             </div>
         </div>
