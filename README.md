@@ -1,5 +1,5 @@
 # weatherapp
-Here is my url:https://naziaali1525.github.io/weathercard/
+Here is my url: https://naziaali1525.github.io/weathercard/
 
 # Ingredients:
 HTML
