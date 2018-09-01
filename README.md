@@ -1,4 +1,4 @@
-# weathercard
+# weatherapp
 Here is my url:https://naziaali1525.github.io/weathercard/
 
 # Ingredients:
