@@ -42,23 +42,33 @@ function getWeather() {
 
         let icon = data.weather[0].main;
 
-            if (icon == "Smoke") {
-                document.querySelector("#img").innerHTML = `<i class="wi wi-smoke"></i>`
+            if (icon == "Smoke") { console.log(1)
+                document.querySelector("#img").innerHTML = `<i class="wi wi-smoke"></i>`;
+                document.querySelector("body").style.backgroundImage ="url('images/giphy.gif')"
             }
-            else if(icon == "Clouds"){
-                document.querySelector("#img").innerHTML = `<i class="wi wi-day-cloudy"></i>`
+            else if(icon == "Clouds"){console.log(2)
+                document.querySelector("#img").innerHTML = `<i class="wi wi-day-cloudy"></i>`;
+                document.querySelector("body").style.backgroundImage ="url('images/clouds.jpg')";
+                document.querySelector("body").style.color ="black";
             }
-            else if(icon == "Sun") {
-                document.querySelector("#img").innerHTML = `<i class="wi wi-day-sunny"></i>`
+            else if(icon == "Sun") {console.log(3)
+                document.querySelector("#img").innerHTML = `<i class="wi wi-day-sunny"></i>`;
+                document.querySelector("body").style.backgroundImage ="url('images/sun.jpg')"
             }
-            else if(icon == "Rain") {
+            else if(icon == "Rain") {console.log(4)
                 document.querySelector("#img").innerHTML = `<i class="wi wi-day-rain"></i>`
+                document.querySelector("body").style.backgroundImage ="url('images/Lightning.gif')";
+                document.querySelector("body").style.color ="white";
+
+
             }
-            else if(icon == "Haze") {
-                document.querySelector("#img").innerHTML = `<i class="wi wi-day-haze"></i>`
+            else if(icon == "Haze") {console.log(5)
+                document.querySelector("#img").innerHTML = `<i class="wi wi-day-haze"></i>`;
+                document.querySelector("body").style.backgroundImage ="url('images/haze.jpg')"                
             }
-            else {
-                document.querySelector("#img").innerHTML = `<i class="wi wi-night-clear"></i>`
+            else {console.log(6)
+                document.querySelector("#img").innerHTML = `<i class="wi wi-night-clear"></i>`;
+                document.querySelector("body").style.backgroundImage ="url('images/clear.jpg')"                                
             }
            
           
@@ -217,12 +227,10 @@ function getWeather() {
         document.querySelector(".days-icons4").innerHTML = `<i class="wi wi-night-clear"></i>`
         }
 
-        // document.querySelector("body").style.background-image = "block"
-        // let backgrouindImage = "";
-         
-        //     if(backgrouindImage == "Sun") {
-        //         document.querySelector("body").style.background-image = `url('images/giphy.gif')`
-        //     }
+        // let backgroundImage = data.list[16].weather[0].main;
+             
+        //     if (backgroundImage == "Clouds")
+        //      document.querySelector("#container").style ["background-image"] = url('images/winter_snow.jpg');
     },
         error: function(error){
          console.log(error)
