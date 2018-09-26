@@ -44,7 +44,9 @@ function getWeather() {
 
             if (icon == "Smoke") { console.log(1)
                 document.querySelector("#img").innerHTML = `<i class="wi wi-smoke"></i>`;
-                document.querySelector("body").style.backgroundImage ="url('images/giphy.gif')"
+                document.querySelector("body").style.backgroundImage ="url('images/smoke.jpg')";
+                document.querySelector("body").style.color ="white";
+
             }
             else if(icon == "Clouds"){console.log(2)
                 document.querySelector("#img").innerHTML = `<i class="wi wi-day-cloudy"></i>`;
